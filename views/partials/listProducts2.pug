@@ -1,0 +1,14 @@
+.container
+  h3 Productos desde Fakerjs
+  .scrollTable
+    table#listProducts2
+      thead
+        tr
+          each title in table_headers
+            th= title
+          tbody
+            //- tr 
+            //-     td#empty(colspan=3)
+            //-       | No hay productos para mostrar
+            each product in products
+              +productItem2(product)
